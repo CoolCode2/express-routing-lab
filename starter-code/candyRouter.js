@@ -48,7 +48,7 @@ router.put('/:number', function(req,res){
 
 router.delete('/:id', function(req,res){
 
-	candies.foreach(function(currentEl, index){
+	candies.forEach(function(currentEl, index){
 		if(currentEl.id == params.id){
 			var indexLocation = req.params.id-1;
 			candies.splice(indexLocation, 1);
