@@ -46,10 +46,13 @@ router.put('/:number', function(req,res){
 	console.log('put sucessfully updated it');
 });
 
+//delete route fixed
 router.delete('/:id', function(req,res){
-
+	//run throught the candies array, and if the currentEl's
+	//'/:id gets passed in as a string -->--> /:2 --> "2" 
+	//id is == to the re.params string value ("#")
 	candies.forEach(function(currentEl, index){
-		if(currentEl.id == params.id){
+		if(currentEl.id == req.params.id){
 			var indexLocation = req.params.id-1;
 			candies.splice(indexLocation, 1);
 			res.json('message d');

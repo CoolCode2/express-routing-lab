@@ -13,7 +13,8 @@ var candyRouter = require('./candyRouter');
 //we are importing router from other page
 
 app.use(bodyParser.json());
-app.use('/candies', candyRouter);
+app.use('/candies', candyRouter); 
+//this sets all routes to begin with candies
 
 //How do we redirect the /candies path
 //through our candyRouter?
